@@ -16,10 +16,11 @@ document.querySelector("#play").addEventListener("click", function() {
 	if(!video.paused){
 		console.log("in loop should be false", video.paused);
 		document.querySelector("#slider").value = video.volume;
-		document.querySelector("#volume").innerHTML = video.volume + "%";
+		
 		console.log("test");
 
 	}
+	document.querySelector("#volume").innerHTML = video.volume * 100 + "%";
 	video.play();
 	// video.paused = false;
 
