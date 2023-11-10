@@ -28,31 +28,31 @@ document.querySelector("#play").addEventListener("click", function() {
 });
 
 document.querySelector("#pause").addEventListener("click", function(){
-	console.log("before",video.paused)
+	console.log("before",video.paused);
 	video.pause();
 	// video.paused = true;
-	console.log("after", video.paused)
+	console.log("after", video.paused);
 
 
 })
 document.querySelector("#slower").addEventListener("click", function(){
 	console.log("og playbackrate before slower",video.playbackRate)
-	video.playbackRate = video.playbackRate * 0.9
-	console.log("new playbackrate after slower",video.playbackRate)
+	video.playbackRate = video.playbackRate * 0.9;
+	console.log("new playbackrate after slower",video.playbackRate);
 
 })
 document.querySelector("#faster").addEventListener("click", function(){
-	console.log("og playbackrate before faster",video.playbackRate)
-	video.playbackRate = video.playbackRate * 1.1
-	console.log("new playbackrate after faster",video.playbackRate)
+	console.log("og playbackrate before faster",video.playbackRate);
+	video.playbackRate = video.playbackRate * 1.1;
+	console.log("new playbackrate after faster",video.playbackRate);
 
 })
 
 document.querySelector("#skip").addEventListener("click", function(){
-	console.log("before skip", video.currentTime)
+	console.log("before skip", video.currentTime);
 	if (video.ended | video.currentTime == video.duration){
 		video.currentTime = 0;
-		console.log("at end of video so back to start")
+		console.log("at end of video so back to start");
 	}
 	else{
 		video.currentTime += 10;
@@ -70,11 +70,11 @@ document.querySelector("#slider").addEventListener("change", function(){
 	
 })
 document.getElementById("vintage").addEventListener("click", function(){
-	video.className = "oldSchool"
+	video.className = "oldSchool";
 
 })
 document.getElementById("orig").addEventListener("click", function(){
-	video.className = "video"
+	video.className = "video";
 
 })
 
