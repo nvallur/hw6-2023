@@ -10,18 +10,28 @@ window.addEventListener("load", function() {
 
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
-	video.play();
+	
 	console.log(video.volume);
-	document.querySelector("#slider").value = video.volume
-	document.querySelector("#volume").innerHTML = video.volume + "%"
+	console.log(video.paused);
+	if(!video.paused){
+		console.log("in loop should be false", video.paused);
+		document.querySelector("#slider").value = video.volume;
+		document.querySelector("#volume").innerHTML = video.volume + "%";
+		console.log("test");
+
+	}
+	video.play();
+	// video.paused = false;
+
 
 
 });
 
 document.querySelector("#pause").addEventListener("click", function(){
-	console.log("before",video.pause)
+	console.log("before",video.paused)
 	video.pause();
-	console.log("after", video.pause)
+	// video.paused = true;
+	console.log("after", video.paused)
 
 
 })
